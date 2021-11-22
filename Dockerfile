@@ -6,4 +6,4 @@ WORKDIR /app/
 
 COPY ./ ./
 
-CMD sh -c "for f in $(find /etc/nginx/templates -name '*.conf'); do envsubst < $f > /etc/nginx/conf.d/$(basename $f); done" && nginx -g 'daemon off;'
+CMD sh -c "envsubst < /etc/nginx/templates/main.conf > /etc/nginx/conf.d/main.conf" && nginx -g 'daemon off;'
