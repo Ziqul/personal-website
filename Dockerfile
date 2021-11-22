@@ -6,4 +6,4 @@ WORKDIR /app/
 
 COPY ./ ./
 
-CMD sh -c "envsubst < /etc/nginx/templates/main.conf > /etc/nginx/conf.d/main.conf" && nginx -g 'daemon off;'
+CMD envsubst < /etc/nginx/templates/main.conf > /etc/nginx/conf.d/main.conf && nginx -g 'daemon off;'
