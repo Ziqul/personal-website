@@ -6,4 +6,4 @@ WORKDIR /app/
 
 COPY ./ ./
 
-CMD /bin/bash -c "envsubst '\$PORT' < /etc/nginx/templates/main.conf.template > /etc/nginx/conf.d/main.conf" && nginx -g 'daemon off;'
+CMD /bin/bash -c "envsubst '\$PORT' < /etc/nginx/templates/main.conf > /etc/nginx/conf.d/main.conf" && nginx -g 'daemon off;'
