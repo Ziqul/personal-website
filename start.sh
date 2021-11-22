@@ -1,4 +1,4 @@
-for f in $(find /etc/nginx/templates); do
+for f in $(find /etc/nginx/templates -type f); do
 	envsubst < $f > "/etc/nginx/conf.d/$(basename $f)"
 done
 
