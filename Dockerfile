@@ -1,11 +1,7 @@
-FROM node:16.3.0
+FROM nginx:1.21.4
+
+COPY nginx/ /etc/nginx/
 
 WORKDIR /app/
 
-COPY ./package* ./
-
-RUN npm ci
-
-COPY ./src/ ./src/
-
-CMD ["npm", "start"]
+COPY ./ ./
