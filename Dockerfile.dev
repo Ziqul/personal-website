@@ -1,3 +1,5 @@
-FROM node:16.3.0
+FROM nginx:1.21.4
+
+COPY nginx.conf.template /etc/nginx/templates/
 
 WORKDIR /app/
