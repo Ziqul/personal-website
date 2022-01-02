@@ -1,7 +1,7 @@
 server {
+	server_name
+		www.localhost
+		www.sorokingroup.com;
 	listen $PORT;
-
-	location / {
-		root /app/static/;
-	}
+	root /app/static/;
 }
